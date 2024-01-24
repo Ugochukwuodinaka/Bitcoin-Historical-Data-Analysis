@@ -258,3 +258,42 @@ df_new.describe().astype(int)
 The dataset provides a comprehensive overview of cryptocurrency market trends, specifically focused on Bitcoin, with descriptive statistics revealing key insights.
 The mean values for Open, High, Low, and Close suggest a relatively stable market, hovering around $6000. However, the substantial standard deviations (std) indicate considerable volatility. The range from the minimum to maximum values showcases the cryptocurrency's evolution since 2011, with a notable surge in 2017, as indicated by the median values. The Volume statistics underline the varying degrees of market participation, with a median Volume_(BTC) of 1 but a maximum of 5853, highlighting instances of heightened trading activity. The Weighted_Price, representing the average price weighted by volume, aligns closely with the mean values for Open, High, Low, and Close. The temporal distribution of the data, illustrated by the Year statistics, spans from 2011 to 2021, capturing the cryptocurrency's journey over the past decade. These statistics collectively portrays a picture of Bitcoin's market dynamics, reflecting both stability and volatility within the observed period.
 
+### Bivariate Analysis
+
+#### Trading Volume Over the Years
+```
+Trading_Volume_By_Year = df_new.groupby('Year')['Volume_(BTC)'].sum().reset_index(name= 'Trading Volume By Year')
+Trading_Volume_By_Year
+```
+Plotting a Line Chart
+
+Trading_Volume_By_Year is our DataFrame
+
+```
+plt.figure(figsize=(10, 6))
+```
+round the values
+```
+rounded_values = Trading_Volume_By_Year['Trading Volume By Year']
+labels = []
+
+for value in rounded_values:
+    if value >= 1e6:
+        labels.append(f'{value / 1e6:.2f}M')
+    elif value >= 1e3:
+        labels.append(f'{value / 1e3:.2f}K')
+    else:
+        labels.append(f'{value:.2f}')
+
+plt.plot(Trading_Volume_By_Year['Year'], rounded_values, marker='o', linestyle='-', color='b')
+plt.title('Trading Volume Over the Years')
+plt.xlabel('Year')
+plt.ylabel('Trading Volume')
+plt.xticks(Trading_Volume_By_Year['Year'])
+```
+Adding rounded labels to data points
+```
+for i, txt in enumerate(labels):
+    plt.annotate(txt, (Trading_Volume_By_Year['Year'][i], rounded_values[i]), textcoords="offset points", xytext=(0, 5), ha='center')
+plt.show()
+```

@@ -163,7 +163,98 @@ Get the first 10 rows of data
 ```
 df_new.head(10)
 ```
+![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/9887400f-1818-471e-b9d2-ef7e63c1c07c)
 
+Re-check the shape of the data
+```
+df_new.shape
+```
+Re-check the size of the data
+```
+df_new.size
+```
+Get the full info of the columns once again
+```
+df_new.info()
+```
+Get the descriptive statistics
+```
+df_new.describe().astype(int)
+```
+Check once again for interger and float columns
+```
+df_new.select_dtypes(include=[int, float]).columns
+```
+Check for object or categorical columns
+```
+df_new.select_dtypes(include=['object', 'category']).columns
+```
+Check for unique dates
+```
+df_new.Date.nunique()
+```
 
+## Key Performance Indicators (KPIs)
 
+### Total Trading Volume
+
+```
+TradingVolume_sum = df_new['Volume_(BTC)'].sum()
+```
+round to one decimal place and display in millions
+```
+rounded_TradingVolume = round(TradingVolume_sum, 1) 
+Trading_Volume = (f"{rounded_TradingVolume/1e6:.0f}m")
+Trading_Volume
+```
+
+### Transaction Value
+```
+TransactionValue_sum = df_new['Volume_(Currency)'].sum()
+```
+
+round to one decimal place and display in billions
+```
+rounded_TransactionValue = round(TransactionValue_sum, 1) 
+Transaction_Value = (f"{rounded_TransactionValue/1e9:.0f}bn")
+Transaction_Value
+```
+### Total Weighted Price
+```
+WeightedPrice_sum = df_new['Weighted_Price'].sum()
+```
+round to one decimal place and display in 
+```
+rounded_WeightedPrice_sum = round(WeightedPrice_sum, 1) 
+Total_Weighted_Price = (f"{rounded_WeightedPrice_sum/1e9:.0f}bn")
+Total_Weighted_Price
+```
+### Minimum Open Price
+```
+Minimum_Open_Price = df_new['Open'].min()
+Minimum_Open_Price
+```
+### Maximum Close Price
+```
+MaximumClosePrice = df_new['Close'].max()
+round to one decimal place and display in thousands
+rounded_MaximumClosePrice = round(MaximumClosePrice, 1) 
+Maximum_Close_Price = (f"{rounded_MaximumClosePrice/1000:.1f}k")
+Maximum_Close_Price
+```
+
+## Visualization and observations
+
+### Univariate Analysis
+
+Descriptive Statistics Observation
+```
+df_new.describe().astype(int)
+```
+![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/a2b65da6-7087-488c-b04c-5c626f8506b9)
+
+#### Observation
+
+The dataset provides a comprehensive overview of cryptocurrency market trends, specifically focused on Bitcoin, with descriptive statistics revealing key insights.
+The mean values for Open, High, Low, and Close suggest a relatively stable market, hovering around $6000. However, the substantial standard deviations (std) indicate considerable volatility. The range from the minimum to maximum values showcases the cryptocurrency's evolution since 2011, with a notable surge in 2017, as indicated by the median values. The Volume statistics underline the varying degrees of market participation, with a median Volume_(BTC) of 1 but a maximum of 5853, highlighting instances of heightened trading activity. The Weighted_Price, representing the average price weighted by volume, aligns closely with the mean values for Open, High, Low, and Close. The temporal distribution of the data, illustrated by the Year statistics, spans from 2011 to 2021, capturing the cryptocurrency's journey over the past decade. These statistics collectively portrays a picture of Bitcoin's market dynamics, reflecting both stability and volatility within the observed period.
 

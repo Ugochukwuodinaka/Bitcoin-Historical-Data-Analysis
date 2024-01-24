@@ -253,7 +253,7 @@ df_new.describe().astype(int)
 ```
 ![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/a2b65da6-7087-488c-b04c-5c626f8506b9)
 
-#### Observation
+#### Observation and Summary:
 
 The dataset provides a comprehensive overview of cryptocurrency market trends, specifically focused on Bitcoin, with descriptive statistics revealing key insights.
 The mean values for Open, High, Low, and Close suggest a relatively stable market, hovering around $6000. However, the substantial standard deviations (std) indicate considerable volatility. The range from the minimum to maximum values showcases the cryptocurrency's evolution since 2011, with a notable surge in 2017, as indicated by the median values. The Volume statistics underline the varying degrees of market participation, with a median Volume_(BTC) of 1 but a maximum of 5853, highlighting instances of heightened trading activity. The Weighted_Price, representing the average price weighted by volume, aligns closely with the mean values for Open, High, Low, and Close. The temporal distribution of the data, illustrated by the Year statistics, spans from 2011 to 2021, capturing the cryptocurrency's journey over the past decade. These statistics collectively portrays a picture of Bitcoin's market dynamics, reflecting both stability and volatility within the observed period.
@@ -265,9 +265,9 @@ The mean values for Open, High, Low, and Close suggest a relatively stable marke
 Trading_Volume_By_Year = df_new.groupby('Year')['Volume_(BTC)'].sum().reset_index(name= 'Trading Volume By Year')
 Trading_Volume_By_Year
 ```
-Plotting a Line Chart
+#### Plotting a Line Chart
 
-Trading_Volume_By_Year is our DataFrame
+Trading_Volume_By_Year as DataFrame
 
 ```
 plt.figure(figsize=(10, 6))
@@ -297,3 +297,80 @@ for i, txt in enumerate(labels):
     plt.annotate(txt, (Trading_Volume_By_Year['Year'][i], rounded_values[i]), textcoords="offset points", xytext=(0, 5), ha='center')
 plt.show()
 ```
+![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/cc8e039a-8282-4dde-a3fe-8f84fcebfba2)
+
+### Observation and Summary:
+
+The provided data represents the annual trading volume in Bitcoin (BTC) over the years, spanning from 2011 to 2021. Below is a summary of the trading volumes for each year:
+
+- 2011: The trading volume in 2011 was approximately 95.32 BTC.
+
+- 2012: The trading volume saw a significant increase in 2012, reaching around 567,948 BTC.
+
+- 2013: The trend of increased trading volume continued in 2013, with the volume surging to approximately 5.03 million BTC.
+
+- 2014: The trading volume in 2014 remained consistent with the previous year, hovering around 5.02 million BTC.
+
+- 2015: The year 2015 witnessed a slight increase in trading volume, reaching approximately 5.53 million BTC.
+
+- 2016: There was a notable decline in trading volume in 2016, with the volume dropping to around 1.99 million BTC.
+
+- 2017: The trading volume rebounded in 2017, reaching approximately 4.70 million BTC.
+
+- 2018: The trading volume decreased in 2018, amounting to about 3.93 million BTC.
+
+- 2019: Further decline was observed in 2019, with the trading volume dropping to around 2.99 million BTC.
+
+- 2020: The year 2020 saw a slight increase in trading volume, reaching approximately 3.07 million BTC.
+
+- 2021: The trading volume experienced a notable decrease in 2021, amounting to around 851,118 BTC.
+
+In summary, the Bitcoin trading volume exhibited fluctuations over the years, influenced by market dynamics, technological developments, and global events. The years 2012 and 2013 stand out with substantial increases in trading activity, while subsequent years showed varying degrees of volatility and stabilization. The data provides insights into the evolving dynamics of the cryptocurrency market during this period.
+
+#### Transaction Value Over Tthe Years
+```
+Transaction_Value_By_Year = df_new.groupby('Year')['Volume_(Currency)'].sum().reset_index(name= 'Transaction Value By Year')
+Transaction_Value_By_Year
+```
+#### Plotting a Line Chart
+
+Transaction_Value_By_Year as DataFrame
+```
+plt.figure(figsize=(10, 6))
+```
+Convert the transaction values to billions for better readability
+```
+Transaction_Value_By_Year['Transaction Value By Year (Billion)'] = Transaction_Value_By_Year['Transaction Value By Year'] / 1e9
+
+plt.plot(Transaction_Value_By_Year['Year'], Transaction_Value_By_Year['Transaction Value By Year (Billion)'], marker='o', linestyle='-', color='b')
+plt.title('Transaction Value Over the Years')
+plt.xlabel('Year')
+plt.ylabel('Transaction Value (Billion USD)')
+plt.xticks(Transaction_Value_By_Year['Year'])  # Set x-axis ticks to match the years
+```
+Adding labels to data points with exact values in billions
+```
+for i, txt in enumerate(Transaction_Value_By_Year['Transaction Value By Year (Billion)']):
+    plt.annotate(f'{txt:.2f}B', (Transaction_Value_By_Year['Year'][i], txt), textcoords="offset points", xytext=(0,5), ha='center')
+
+plt.show()
+```
+![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/8fd92e7d-e5ca-4ca6-b766-897d97de0117)
+
+### Observation and Summary:
+
+The data on transaction value by year provides valuable insights into the evolution of Bitcoin's financial activity over the past decade. Here are key observations:
+
+- Early Years (2011-2015): The transaction values in the early years, particularly in 2011, 2012, and 2015, were relatively modest, ranging from hundreds of millions to a few billion USD. This suggests a developing and nascent stage for Bitcoin as a financial asset during this period.
+
+- Significant Increase in 2013-2014: The year 2013 witnessed a notable uptick in transaction value, reaching 1.55 billion USD, and this trend continued in 2014, reaching 2.62 billion USD. This surge aligns with increased adoption and recognition of Bitcoin within the financial landscape.
+
+- Stability and Fluctuations (2015-2019): From 2015 to 2019, transaction values fluctuated but remained within the range of approximately 1 billion to 3 billion USD. This period reflects a level of stability in Bitcoin transactions, with variations possibly influenced by market sentiment, regulatory developments, and technological advancements.
+
+- Peak in 2017: The year 2017 marked a significant turning point, with a remarkable surge in transaction value to 21.78 billion USD. This substantial increase aligns with the broader cryptocurrency boom during that period, characterized by heightened market interest, increased institutional participation, and skyrocketing Bitcoin prices.
+
+- Sustained High Transaction Values (2018-2021): Despite fluctuations, the years 2018, 2019, 2020, and 2021 maintained high transaction values, ranging from 23.16 billion to 35.12 billion USD. This suggests a sustained and growing interest in Bitcoin, with increased financial activity in the cryptocurrency market.
+
+- Year 2021: The data for 2021 indicates a transaction value of 35.12 billion USD, reinforcing the ongoing prominence of Bitcoin in the financial landscape. The sustained high transaction values in recent years highlight Bitcoin's role as a significant asset class and a store of value.
+
+In summary, the observed transaction values depict the dynamic nature of Bitcoin's financial activity, with notable spikes in 2013, 2017, and sustained high values in subsequent years. These trends may be indicative of evolving market dynamics, increased adoption, and the growing integration of Bitcoin into the broader financial ecosystem.

@@ -1,5 +1,10 @@
 # Bitcoin-Historical-Data (Jan, 2012 - March, 2021)
 
+## Table of Contents
+- [Project Overview](project-overview)
+- [Tools](tools)
+- 
+
 ## Project Overview
 Cryptocurrency is a type of digital or virtual currency that uses cryptography for security and operates on a decentralized network of computers. Unlike traditional currencies issued by governments , cryptocurrencies operate on a technology called blockchain. Blockchain is a distributed ledger that records all transactions across a network of computers.
 Bitcoin is the first and most well-known cryptocurrency, created in 2009 by an unknown person or group using the pseudonym Satoshi Nakamoto. Bitcoin is often referred to as digital gold and is designed to be a decentralized and censorship-resistant form of currency. Here are some key features of Bitcoin and cryptocurrencies in general:
@@ -242,6 +247,7 @@ rounded_MaximumClosePrice = round(MaximumClosePrice, 1)
 Maximum_Close_Price = (f"{rounded_MaximumClosePrice/1000:.1f}k")
 Maximum_Close_Price
 ```
+![KPIs](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/d4857699-ed8e-4335-9823-2f59d0a53103)
 
 ## Visualization and observations
 

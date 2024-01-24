@@ -299,7 +299,7 @@ plt.show()
 ```
 ![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/cc8e039a-8282-4dde-a3fe-8f84fcebfba2)
 
-### Observation and Summary:
+#### Observation and Summary:
 
 The provided data represents the annual trading volume in Bitcoin (BTC) over the years, spanning from 2011 to 2021. Below is a summary of the trading volumes for each year:
 
@@ -338,7 +338,7 @@ Transaction_Value_By_Year as DataFrame
 ```
 plt.figure(figsize=(10, 6))
 ```
-Convert the transaction values to billions for better readability
+Convert the transaction values to billions for better readability and plot the chart
 ```
 Transaction_Value_By_Year['Transaction Value By Year (Billion)'] = Transaction_Value_By_Year['Transaction Value By Year'] / 1e9
 
@@ -357,7 +357,7 @@ plt.show()
 ```
 ![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/8fd92e7d-e5ca-4ca6-b766-897d97de0117)
 
-### Observation and Summary:
+#### Observation and Summary:
 
 The data on transaction value by year provides valuable insights into the evolution of Bitcoin's financial activity over the past decade. Here are key observations:
 
@@ -374,3 +374,123 @@ The data on transaction value by year provides valuable insights into the evolut
 - Year 2021: The data for 2021 indicates a transaction value of 35.12 billion USD, reinforcing the ongoing prominence of Bitcoin in the financial landscape. The sustained high transaction values in recent years highlight Bitcoin's role as a significant asset class and a store of value.
 
 In summary, the observed transaction values depict the dynamic nature of Bitcoin's financial activity, with notable spikes in 2013, 2017, and sustained high values in subsequent years. These trends may be indicative of evolving market dynamics, increased adoption, and the growing integration of Bitcoin into the broader financial ecosystem.
+
+### Weighted Price Value Over The Years
+```
+Weighted_Price_By_Year = df_new.groupby('Year')['Weighted_Price'].sum().reset_index(name= 'Weighted Price By Year')
+Weighted_Price_By_Year
+```
+### Plotting a Line Chart
+
+Convert the weighted prices to billions for better readability and plot the chart
+```
+Weighted_Price_By_Year['Weighted Price By Year (Billion)'] = Weighted_Price_By_Year['Weighted Price By Year'] / 1e9
+
+plt.figure(figsize=(10, 6))
+plt.plot(Weighted_Price_By_Year['Year'], Weighted_Price_By_Year['Weighted Price By Year (Billion)'], marker='o', linestyle='-', color='b')
+plt.title('Weighted Price Over the Years')
+plt.xlabel('Year')
+plt.ylabel('Weighted Price (Billion USD)')
+plt.xticks(Weighted_Price_By_Year['Year'])  # Set x-axis ticks to match the years
+```
+Adding labels to data points with rounded values in billions
+```
+for i, txt in enumerate(Weighted_Price_By_Year['Weighted Price By Year (Billion)']):
+    rounded_value = round(txt, 2)  # Round to two decimal places
+    plt.annotate(f'{rounded_value}B', (Weighted_Price_By_Year['Year'][i], txt), textcoords="offset points", xytext=(0,5), ha='center')
+
+plt.show()
+```
+
+![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/77b13eba-5ea9-49bc-bcd7-b9864a6b064a)
+
+#### Observation and Summary:
+
+The data on weighted prices by year provides insights into the valuation dynamics of Bitcoin over the past decade. Here are key observations:
+
+- Early Years (2011-2015): In the early years, from 2011 to 2015, the weighted prices were relatively modest, ranging from approximately 18 USD in 2011 to around 102 million USD in 2015. This period suggests a gradual establishment of Bitcoin's valuation with a significant increase in 2013, reflecting growing market recognition.
+
+- Notable Increase in 2013-2016: A significant increase in weighted prices is observed from 2013 to 2016, reaching a peak of approximately 1.97 billion USD in 2016. This period likely reflects a combination of factors, including increased adoption, heightened market interest, and the maturation of Bitcoin as a financial asset.
+
+- Peak in 2017: The year 2017 stands out with a substantial peak in weighted prices, reaching 2.01 billion USD. This aligns with the broader cryptocurrency boom during that period, characterized by heightened market speculation and increased institutional interest.
+
+- Sustained High Valuations (2018-2021): From 2018 to 2021, weighted prices remained consistently high, ranging from 3.77 billion to 5.76 billion USD. This sustained high valuation suggests that Bitcoin has maintained its status as a significant and valuable asset, attracting continued investor interest.
+
+- Year 2020-2021: The data for 2020 and 2021 indicates relatively stable weighted prices, with both years hovering around the 5.76 billion USD mark. This suggests that Bitcoin's valuation has reached a level of stability after the peak observed in 2017.
+
+In summary, the observed trends in weighted prices reflect the evolving perception and valuation of Bitcoin in the financial markets. The peak in 2017 marked a period of exceptional valuation, while the subsequent years indicate sustained high levels, showcasing Bitcoin's resilience and recognition as a valuable asset class. The relatively stable valuations in recent years may suggest a maturation of the cryptocurrency market.
+
+### Multivariate Analysis
+### Total of Open, Low, High, and Close Price Over the Years
+
+Group by 'Year' and calculate the sum for each column
+```
+sum_by_year = df_new.groupby('Year').agg({
+    'Open': 'sum',
+    'Low': 'sum',
+    'High': 'sum',
+    'Close': 'sum'
+}).reset_index()
+```
+Convert sums to billions for better readability
+```
+sum_by_year['Sum_Open (Billion)'] = round(sum_by_year['Open'] / 1e9, 2)
+sum_by_year['Sum_Low (Billion)'] = round(sum_by_year['Low'] / 1e9, 2)
+sum_by_year['Sum_High (Billion)'] = round(sum_by_year['High'] / 1e9, 2)
+sum_by_year['Sum_Close (Billion)'] = round(sum_by_year['Close'] / 1e9, 2)
+
+print(sum_by_year)
+```
+### Plotting a Multi-Line Chart
+
+Plotting the multi-spaced line chart with no grids
+```
+plt.figure(figsize=(12, 8))
+```
+Adding some vertical spacing between the lines
+```
+spacing = 0.5
+```
+Iterate through columns and plot each line separately
+```
+for column in ['Open', 'Low', 'High', 'Close']:
+    plt.plot(sum_by_year['Year'], sum_by_year[column] / 1e9 + spacing * sum_by_year.columns.get_loc(column), marker='o', linestyle='-', label=column)
+```
+Adding labels to data points with exact values in billions
+```
+    for i, year in enumerate(sum_by_year['Year']):
+        plt.annotate(f'{sum_by_year[column][i] / 1e9:.2f}B', (year, (sum_by_year[column][i] / 1e9) + spacing * sum_by_year.columns.get_loc(column)), textcoords="offset points", xytext=(0, 5), ha='center')
+
+plt.title('Total of Open, Low, High, and Close Prices Over the Years')
+plt.xlabel('Year')
+plt.ylabel('Sum (Billion USD)')
+plt.xticks(sum_by_year['Year'])  # Set x-axis ticks to match the years
+plt.legend()
+```
+![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/ae3717de-0837-46d8-b5f2-5ace93223d0a)
+
+### Observation and Summary:
+
+The provided data represents the summary statistics for Bitcoin price levels (Open, Low, High, and Close) for each year from 2011 to 2021. Here are key observations:
+
+- Open Price: The Open price shows a significant increase over the years, starting from approximately  18𝑖𝑛2011𝑎𝑛𝑑𝑟𝑒𝑎𝑐ℎ𝑖𝑛𝑔𝑜𝑣𝑒𝑟
+ 5.7 billion in 2021. There is a consistent upward trend, reflecting the overall growth and interest in Bitcoin during this period.
+
+- Low Price: The Low price exhibits a similar trend to the Open price, indicating that even the lowest daily prices have increased substantially. The Low price in 2011 was around  17.86,𝑤ℎ𝑖𝑙𝑒𝑖𝑛2021,𝑖𝑡𝑟𝑒𝑎𝑐ℎ𝑒𝑑𝑎𝑝𝑝𝑟𝑜𝑥𝑖𝑚𝑎𝑡𝑒𝑙𝑦
+ 5.74 billion.
+
+- High Price: The High price reflects the highest daily trading price of Bitcoin, and it follows a consistent upward trajectory. From around  17.93𝑖𝑛2011,𝑡ℎ𝑒𝐻𝑖𝑔ℎ𝑝𝑟𝑖𝑐𝑒𝑠𝑢𝑟𝑔𝑒𝑑𝑡𝑜𝑎𝑏𝑜𝑢𝑡
+ 5.75 billion in 2021.
+
+- Close Price: The Close price, representing the final trading price of the day, also shows a notable increase over the years. Starting from  17.93𝑖𝑛2011,𝑡ℎ𝑒𝐶𝑙𝑜𝑠𝑒𝑝𝑟𝑖𝑐𝑒𝑟𝑒𝑎𝑐ℎ𝑒𝑑𝑎𝑝𝑝𝑟𝑜𝑥𝑖𝑚𝑎𝑡𝑒𝑙𝑦
+ 5.75 billion in 2021.
+
+-Overall Trend: The data suggests a remarkable long-term bullish trend in Bitcoin prices, with each year's metrics significantly surpassing the previous year. The cryptocurrency market, as reflected in Bitcoin prices, has experienced substantial growth and attention over the analyzed period.
+
+It's important to note that these figures represent the aggregated summary for each year and provide an overview of the broader trend in Bitcoin prices. Individual factors, market events, and external influences can contribute to fluctuations within each year. The data underscores the dynamic and evolving nature of the cryptocurrency market during the specified timeframe.
+
+
+Save the updated DataFrame to CSV without the python generated index column
+```
+df_new.to_csv('historical_bitcoin_data.csv', index=False)
+```

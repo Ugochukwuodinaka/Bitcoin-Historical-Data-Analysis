@@ -1,8 +1,8 @@
 # Bitcoin-Historical-Data (Jan, 2012 - March, 2021)
 
 ## Table of Contents
-- [Project Overview](project-overview)
-- [Tools](tools)
+- [Project Overview](#project-overview)
+- [Tools](#tools)
 - 
 
 ## Project Overview

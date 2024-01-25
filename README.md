@@ -4,6 +4,10 @@
 - [Project Overview](#project-overview)
 - [EDA With Python](#data-cleaning-and-exploratory-data-analysis-using-python)
 - [KPIs](#key-performance-indicators)
+- [Univariate Analysis](#univariate-analysis)
+- [Bivariate Amalysis](#bivariate-analysis)
+- [Multivariate Analysis](#multivariate-analysis)
+- [Observation and Summary](#observation-and-summary)
 
 ## Project Overview
 Cryptocurrency is a type of digital or virtual currency that uses cryptography for security and operates on a decentralized network of computers. Unlike traditional currencies issued by governments , cryptocurrencies operate on a technology called blockchain. Blockchain is a distributed ledger that records all transactions across a network of computers.

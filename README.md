@@ -9,6 +9,10 @@
 - [Multivariate Analysis](#multivariate-analysis)
 - [Observation and Summary](#observation-and-summary)
 
+## Project Screenshot From Power Bi Dashboard
+![Bitcoin Historical Dashboard](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/f6c8b9d9-2b0c-40ad-a6c0-fbec871d36a3)
+
+
 ## Project Overview
 Cryptocurrency is a type of digital or virtual currency that uses cryptography for security and operates on a decentralized network of computers. Unlike traditional currencies issued by governments , cryptocurrencies operate on a technology called blockchain. Blockchain is a distributed ledger that records all transactions across a network of computers.
 Bitcoin is the first and most well-known cryptocurrency, created in 2009 by an unknown person or group using the pseudonym Satoshi Nakamoto. Bitcoin is often referred to as digital gold and is designed to be a decentralized and censorship-resistant form of currency. Here are some key features of Bitcoin and cryptocurrencies in general:

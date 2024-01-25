@@ -508,3 +508,5 @@ Save the updated DataFrame to CSV without the python generated index column
 ```
 df_new.to_csv('historical_bitcoin_data.csv', index=False)
 ```
+## View In Power BI Dashboard
+[Dashboard View](https://app.powerbi.com/links/95BonwoXXC?ctid=7ec29659-3cf2-4f3f-abb3-a722edf7ff2d&pbi_source=linkShare)

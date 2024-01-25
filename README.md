@@ -261,7 +261,7 @@ Maximum_Close_Price
 
 ### Univariate Analysis
 
-Descriptive Statistics Observation
+Descriptive Statistics and Observation
 ```
 df_new.describe().astype(int)
 ```

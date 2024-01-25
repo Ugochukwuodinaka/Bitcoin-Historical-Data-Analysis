@@ -509,4 +509,5 @@ Save the updated DataFrame to CSV without the python generated index column
 df_new.to_csv('historical_bitcoin_data.csv', index=False)
 ```
 ## View In Power BI Dashboard
-[Dashboard View](https://app.powerbi.com/links/95BonwoXXC?ctid=7ec29659-3cf2-4f3f-abb3-a722edf7ff2d&pbi_source=linkShare)
+Here’s a link to a [Report Dashboard](https://app.powerbi.com/links/95BonwoXXC?ctid=7ec29659-3cf2-4f3f-abb3-a722edf7ff2d&pbi_source=linkShare)
+ I created in the second phase of this project . This dashboard displays a vivid visual of this analysis on Historical Bitcoin trading trend between 2012 - 2021.

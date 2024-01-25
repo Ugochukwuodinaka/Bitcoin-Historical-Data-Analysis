@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Tools](#tools)
+- [EDA With Python](#data-cleaning-and-exploratory-data-analysis-using-python)
 - 
 
 ## Project Overview

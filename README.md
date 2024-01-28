@@ -15,17 +15,53 @@
 
 
 ## Project Overview
-Cryptocurrency is a type of digital or virtual currency that uses cryptography for security and operates on a decentralized network of computers. Unlike traditional currencies issued by governments , cryptocurrencies operate on a technology called blockchain. Blockchain is a distributed ledger that records all transactions across a network of computers.
-Bitcoin is the first and most well-known cryptocurrency, created in 2009 by an unknown person or group using the pseudonym Satoshi Nakamoto. Bitcoin is often referred to as digital gold and is designed to be a decentralized and censorship-resistant form of currency. Here are some key features of Bitcoin and cryptocurrencies in general:
-Decentralization: Cryptocurrencies operate on a decentralized network of computers, which means no single entity, such as a government or financial institution, has control over the entire network. 
-Blockchain Technology: The blockchain is a distributed ledger that records all transactions in a secure and transparent manner. 
-Cryptography: Cryptocurrencies use cryptographic techniques to secure transactions and control the creation of new units. 
-Limited Supply: Many cryptocurrencies, including Bitcoin, have a limited supply. For example, the total supply of Bitcoin is capped at 21 million coins, making it a deflationary asset. 
-Mining: Some cryptocurrencies, including Bitcoin, use a process called mining to validate transactions and secure the network. 
-Volatility: Cryptocurrency prices can be highly volatile, with values subject to rapid and unpredictable changes. 
-Use Cases: Cryptocurrencies can be used for various purposes, including online transactions, remittances, and as a store of value. 
+**Introduction:**
 
-Let's move forward to the analysis of the Bitcoin Historical Data (Jan, 2012 - March, 2021)
+Bitcoin, the pioneering cryptocurrency, has garnered significant attention and investment over the past decade. Understanding its historical price movements and trading volumes is crucial for investors, traders, and researchers alike. This data analysis project aims to explore Bitcoin's historical data spanning from 2012 to 2021, uncovering trends, patterns, and insights that can inform investment decisions and provide valuable market insights.
+
+**Objectives:**
+
+- Analyze Bitcoin price trends over time.
+  
+- Examine the relationship between trading volume and price movements.
+  
+- Identify significant events and their impact on Bitcoin's price.
+  
+- Evaluate the volatility of Bitcoin prices.
+
+**Methodology:**
+
+- Data Collection: Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
+  
+- Data Preprocessing: Cleanse the dataset to handle missing values, outliers, and inconsistencies. Convert timestamps to a standardized format and adjust time zones if necessary.
+
+- Exploratory Data Analysis (EDA): Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
+  
+**Statistical Analysis:**
+
+- Calculate descriptive statistics, including mean, median, standard deviation, and correlation coefficients, to quantify Bitcoin's price movements and trading activity.
+
+**Event Analysis:**
+
+- Identify major events (e.g., regulatory announcements, halving events, market crashes) and analyze their impact on Bitcoin's price and trading volume.
+
+**Volatility Analysis:**
+
+-Measure Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explore the implications of volatility on risk management and investment strategies.
+
+**Results and Insights:**
+
+**Price Trends:** Identify long-term price trends, seasonal patterns, and cyclical movements in Bitcoin's price.
+
+**Volume-Price Relationship:** Determine how changes in trading volume correlate with price movements and assess the significance of volume spikes.
+
+**Event Impact:** Evaluate the impact of significant events on Bitcoin's price dynamics and investor sentiment.
+
+**Volatility Patterns:** Analyze Bitcoin's volatility over time and assess its implications for risk management and portfolio diversification.
+
+**Conclusion:**
+
+The data analysis project provides valuable insights into Bitcoin's historical performance and market dynamics between 2012 and 2021. By understanding past trends and patterns, investors and stakeholders can make informed decisions, manage risks effectively, and capitalize on opportunities in the ever-evolving cryptocurrency market. Further research and analysis may be warranted to explore emerging trends and developments in the cryptocurrency ecosystem.
 
 ## Dataset Overview
 The primary dataset used in this analysis is the "bitstampUSD_1-min_data 2012-01-01_to_2021-03-31_new.csv" file. This dataset was released by [Quantum Analytics](https://www.quantumanalyticsco.org/). It is made up of CSV files for select bitcoin exchanges for the time period of Jan 2012 to December March 2021, with a minute to minute updates of OHLC (Open, High, Low, Close), Volume in BTC and indicated currency, and weighted bitcoin price. Timestamps are in Unix time. Timestamps without any trades or activity have their data fields filled with NaNs. If a timestamp is missing, or if there are jumps, this may be because the exchange (or its API) was down, the exchange (or its API) did not exist, or some other unforeseen technical error in data reporting or gathering. All effort has been made to deduplicate entries and verify the contents are correct and complete to the best of my ability, but obviously trust at your own risk. It is worth noting that there are 4857377 rows and 8 columns present in the Bitcoin Historical data.

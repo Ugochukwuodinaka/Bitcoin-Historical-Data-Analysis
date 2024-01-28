@@ -61,22 +61,11 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
   
 ### Statistical Analysis:
 
-- Calculate descriptive statistics, including mean, median, standard deviation, and correlation coefficients, to quantify Bitcoin's price movements and trading activity.
+- Calculated descriptive statistics, including mean, median, standard deviation, and correlation coefficients, to quantify Bitcoin's price movements and trading activity.
 
 ### Volatility Analysis:
 
-- Measure Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explore the implications of volatility on risk management and investment strategies.
-
-### Data Transformation/ Cleanin:
-
-
-- Price Trends: Identify long-term price trends, seasonal patterns, and cyclical movements in Bitcoin's price.
-
-- Volume-Price Relationship: Determine how changes in trading volume correlate with price movements and assess the significance of volume spikes.
-
-- Event Impact: Evaluate the impact of significant events on Bitcoin's price dynamics and investor sentiment.
-
-- Volatility Patterns: Analyze Bitcoin's volatility over time and assess its implications for risk management and portfolio diversification.
+- Measured Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explored the implications of volatility on risk management and investment strategies.
 
 ### Conclusion:
 

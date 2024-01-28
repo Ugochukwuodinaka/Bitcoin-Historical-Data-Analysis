@@ -67,11 +67,7 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 
 - Measure Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explore the implications of volatility on risk management and investment strategies.
 
-### Conclusion:
-
-The data analysis project provides valuable insights into Bitcoin's historical performance and market dynamics between 2012 and 2021. By understanding past trends and patterns, investors and stakeholders can make informed decisions, manage risks effectively, and capitalize on opportunities in the ever-evolving cryptocurrency market. Further research and analysis may be warranted to explore emerging trends and developments in the cryptocurrency ecosystem.
-
-## Dataset Overview
+### Dataset Overview
 The primary dataset used in this analysis was released by [Quantum Analytics](https://www.quantumanalyticsco.org/). Ii could not upload it to github because of the size. It has 4857377 rows of data and has a size of almost 300 megabyte. You can also download this dataset [here](https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data). It is made up of CSV files for select bitcoin exchanges for the time period of Jan 2012 to December March 2021, with a minute to minute updates of OHLC (Open, High, Low, Close), Volume in BTC and indicated currency, and weighted bitcoin price. Timestamps are in Unix time. Timestamps without any trades or activity have their data fields filled with NaNs. If a timestamp is missing, or if there are jumps, this may be because the exchange (or its API) was down, the exchange (or its API) did not exist, or some other unforeseen technical error in data reporting or gathering. All effort has been made to deduplicate entries and verify the contents are correct and complete to the best of my ability, but obviously trust at your own risk. It is worth noting that there are 4857377 rows and 8 columns present in the Bitcoin Historical data.
 
 The dataset contains 1 sheet/table and the columns includes:
@@ -94,69 +90,7 @@ The dataset contains 1 sheet/table and the columns includes:
 
 ## Data Analysis and Visuals in Python:
 
-## Data Cleaning and Exploratory Data Analysis using Python
-### Import all the necessary libraries
-```
-import pandas as pd
-import os
-import numpy as np
-import plotly.express as px
-```
-For visual
-```
-import matplotlib.pyplot as plt
-import seaborn as sns
-```
-Assign df as pandas DataFrame
-```
-df = pd.DataFrame()
-```
-Import and read file
-```
-df = pd.read_csv(r"bitstampUSD_1-min_data 2012-01-01_to_2021-03-31.csv")
-df
-```
-![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/f595b469-e467-431c-94cd-c4a24a8284e6)
 
-The 10 rows at the top of the data
-```
-df.head(10)
-```
-![image](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/d497c89f-f38b-4870-b614-c5cd72ac15a9)
-
-### DATA PROFILING STEPS
-Data profiling utilizes methods of descriptive statistics such as:
-
-1. Data type
-2. Quantile statistics (central tendecies)
-3. Length (length and shape of the dataset)
-4. Discrete values
-5. Uniqueness (unique values)
-6. Occurence of null values and etc.
-
-Shape of the data
-```
-df.shape
-```
-Size of the data
-```
-df.size
-```
-Check the data types
-```
-df.dtypes
-```
-Check for missing values
-
-The below doesn't give me explicit details of the null values
-```
-df.isnull()
-```
-The below works better and is explicit
-```
-df.isnull().sum()
-```
-### Data Profiling
 
 Check the descriptive statistics
 ```

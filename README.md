@@ -27,19 +27,19 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 
 ### Objectives:
 
-**Analyze Bitcoin Trading Volume:** Investigate the trading volume of Bitcoin from 2012 to 2021 to understand the level of market activity and liquidity over time.
+- Analyze Bitcoin Trading Volume: Investigate the trading volume of Bitcoin from 2012 to 2021 to understand the level of market activity and liquidity over time.
 
-**Evaluate Transaction Value:** Determine the total transaction value of Bitcoin within the specified period to assess the monetary value of transactions conducted on the Bitcoin network.
+- Evaluate Transaction Value: Determine the total transaction value of Bitcoin within the specified period to assess the monetary value of transactions conducted on the Bitcoin network.
 
-**Calculate Average Transaction Value:** Calculate the average transaction value of Bitcoin transactions over the period under consideration, providing insights into the typical size of transactions.
+- Calculate Average Transaction Value: Calculate the average transaction value of Bitcoin transactions over the period under consideration, providing insights into the typical size of transactions.
 
-**Assess Total Weighted Price:** Determine the total weighted price of Bitcoin within the period to understand the overall price trend and market valuation of Bitcoin.
+- Assess Total Weighted Price: Determine the total weighted price of Bitcoin within the period to understand the overall price trend and market valuation of Bitcoin.
 
-**Identify Price Extremes:** Identify the minimum open price and maximum close price of Bitcoin within the period to highlight the range of price fluctuations and extremes observed in the market.
+- Identify Price Extremes: Identify the minimum open price and maximum close price of Bitcoin within the period to highlight the range of price fluctuations and extremes observed in the market.
 
-**Visualize Trends with Charts:** Present trends and patterns in Bitcoin trading volume, transaction value, average transaction value, weighted price, minimum open price, and maximum close price, open, low, high and close price over the years, using visualizations such as line charts.
+- Visualize Trends with Charts: Present trends and patterns in Bitcoin trading volume, transaction value, average transaction value, weighted price, minimum open price, and maximum close price, open, low, high and close price over the years, using visualizations such as line charts.
 
-**Provide Data-Driven Insights:** Extract additional insights from the analysis beyond the specified questions, uncovering any notable trends, anomalies, or correlations observed in the data that may inform decision-making or provide deeper understanding of Bitcoin market dynamics.
+- Provide Data-Driven Insights: Extract additional insights from the analysis beyond the specified questions, uncovering any notable trends, anomalies, or correlations observed in the data that may inform decision-making or provide deeper understanding of Bitcoin market dynamics.
 
 ### Tools Used
 - Python (Was used for Data Cleaning, profilling and Exploratory Data Analysis)
@@ -48,31 +48,37 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 
 ### Methodology (Python):
 
-- **Data Collection:** Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
+- Data Collection: Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
   
-- **Data Preprocessing:** Cleanse the dataset to handle missing values, outliers, and inconsistencies. Convert timestamps to a standardized format and adjust time zones if necessary.
+- Data Preprocessing:
+    1. Removed data rows with null values or has "NaN" because we have 1243608 rows of data with only Timestamp colu,mn data and without the rest of the column data.
+    2. Created a datetime column from the Timestamp column and name it "Date"
+    3. Created a "Year" column from the "Date" column
+    4. Removed the "Timestamp" column
+    5. Re-arranged the columns     
 
-- **Exploratory Data Analysis (EDA):** Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
+- Exploratory Data Analysis (EDA): Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
   
-**Statistical Analysis:**
+### Statistical Analysis:
 
 - Calculate descriptive statistics, including mean, median, standard deviation, and correlation coefficients, to quantify Bitcoin's price movements and trading activity.
 
-**Volatility Analysis:**
+### Volatility Analysis:
 
--Measure Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explore the implications of volatility on risk management and investment strategies.
+- Measure Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explore the implications of volatility on risk management and investment strategies.
 
-**Results and Insights:**
+### Data Transformation/ Cleanin:
 
-**Price Trends:** Identify long-term price trends, seasonal patterns, and cyclical movements in Bitcoin's price.
 
-**Volume-Price Relationship:** Determine how changes in trading volume correlate with price movements and assess the significance of volume spikes.
+- Price Trends: Identify long-term price trends, seasonal patterns, and cyclical movements in Bitcoin's price.
 
-**Event Impact:** Evaluate the impact of significant events on Bitcoin's price dynamics and investor sentiment.
+- Volume-Price Relationship: Determine how changes in trading volume correlate with price movements and assess the significance of volume spikes.
 
-**Volatility Patterns:** Analyze Bitcoin's volatility over time and assess its implications for risk management and portfolio diversification.
+- Event Impact: Evaluate the impact of significant events on Bitcoin's price dynamics and investor sentiment.
 
-**Conclusion:**
+- Volatility Patterns: Analyze Bitcoin's volatility over time and assess its implications for risk management and portfolio diversification.
+
+### Conclusion:
 
 The data analysis project provides valuable insights into Bitcoin's historical performance and market dynamics between 2012 and 2021. By understanding past trends and patterns, investors and stakeholders can make informed decisions, manage risks effectively, and capitalize on opportunities in the ever-evolving cryptocurrency market. Further research and analysis may be warranted to explore emerging trends and developments in the cryptocurrency ecosystem.
 

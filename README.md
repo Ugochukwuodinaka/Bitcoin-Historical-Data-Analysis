@@ -1,5 +1,5 @@
 # Bitcoin-Historical-Data (Jan, 2012 - March, 2021)
-![](bitcoin.jpg)
+![](bitcoin1.jpg)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -12,35 +12,51 @@
 - [View Dashboard Report](#view-power-bi-dashboard-report)
 
 ## Project Overview
-**Introduction:**
+### Introduction:
 
 Bitcoin, the pioneering cryptocurrency, has garnered significant attention and investment over the past decade. Understanding its historical price movements and trading volumes is crucial for investors, traders, and researchers alike. This data analysis project aims to explore Bitcoin's historical data spanning from 2012 to 2021, uncovering trends, patterns, and insights that can inform investment decisions and provide valuable market insights.
-
-**Objectives:**
-
-- Analyze Bitcoin price trends over time.
   
-- Examine the relationship between trading volume and price movements.
-  
-- Identify significant events and their impact on Bitcoin's price.
-  
-- Evaluate the volatility of Bitcoin prices.
+### Problem Statement
+- What was the trading volume of Bitcoin between 2012 - 2021?
+- What was the transaction value within this period?
+- Whay was the average transaction value within this period?
+- What was the total weighted price of Bitcoin within this period?
+- What was the minimum open price and maximum close price within this period?
+- Explain all these with charts showing their trends over the years.
+- Any other relevant data driven insights from the analysis
 
-**Methodology:**
+### Objectives:
 
-- Data Collection: Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
+**Analyze Bitcoin Trading Volume:** Investigate the trading volume of Bitcoin from 2012 to 2021 to understand the level of market activity and liquidity over time.
+
+**Evaluate Transaction Value:** Determine the total transaction value of Bitcoin within the specified period to assess the monetary value of transactions conducted on the Bitcoin network.
+
+**Calculate Average Transaction Value:** Calculate the average transaction value of Bitcoin transactions over the period under consideration, providing insights into the typical size of transactions.
+
+**Assess Total Weighted Price:** Determine the total weighted price of Bitcoin within the period to understand the overall price trend and market valuation of Bitcoin.
+
+**Identify Price Extremes:** Identify the minimum open price and maximum close price of Bitcoin within the period to highlight the range of price fluctuations and extremes observed in the market.
+
+**Visualize Trends with Charts:** Present trends and patterns in Bitcoin trading volume, transaction value, average transaction value, weighted price, minimum open price, and maximum close price, open, low, high and close price over the years, using visualizations such as line charts.
+
+**Provide Data-Driven Insights:** Extract additional insights from the analysis beyond the specified questions, uncovering any notable trends, anomalies, or correlations observed in the data that may inform decision-making or provide deeper understanding of Bitcoin market dynamics.
+
+### Tools Used
+- Python (Was used for Data Cleaning, profilling and Exploratory Data Analysis)
   
-- Data Preprocessing: Cleanse the dataset to handle missing values, outliers, and inconsistencies. Convert timestamps to a standardized format and adjust time zones if necessary.
+- Power BI (Was used to create reports and dashboard for this analysis)
 
-- Exploratory Data Analysis (EDA): Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
+### Methodology (Python):
+
+- **Data Collection:** Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
+  
+- **Data Preprocessing:** Cleanse the dataset to handle missing values, outliers, and inconsistencies. Convert timestamps to a standardized format and adjust time zones if necessary.
+
+- **Exploratory Data Analysis (EDA):** Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
   
 **Statistical Analysis:**
 
 - Calculate descriptive statistics, including mean, median, standard deviation, and correlation coefficients, to quantify Bitcoin's price movements and trading activity.
-
-**Event Analysis:**
-
-- Identify major events (e.g., regulatory announcements, halving events, market crashes) and analyze their impact on Bitcoin's price and trading volume.
 
 **Volatility Analysis:**
 
@@ -61,9 +77,8 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 The data analysis project provides valuable insights into Bitcoin's historical performance and market dynamics between 2012 and 2021. By understanding past trends and patterns, investors and stakeholders can make informed decisions, manage risks effectively, and capitalize on opportunities in the ever-evolving cryptocurrency market. Further research and analysis may be warranted to explore emerging trends and developments in the cryptocurrency ecosystem.
 
 ## Dataset Overview
-The primary dataset used in this analysis is the "bitstampUSD_1-min_data 2012-01-01_to_2021-03-31_new.csv" file. This dataset was released by [Quantum Analytics](https://www.quantumanalyticsco.org/). It is made up of CSV files for select bitcoin exchanges for the time period of Jan 2012 to December March 2021, with a minute to minute updates of OHLC (Open, High, Low, Close), Volume in BTC and indicated currency, and weighted bitcoin price. Timestamps are in Unix time. Timestamps without any trades or activity have their data fields filled with NaNs. If a timestamp is missing, or if there are jumps, this may be because the exchange (or its API) was down, the exchange (or its API) did not exist, or some other unforeseen technical error in data reporting or gathering. All effort has been made to deduplicate entries and verify the contents are correct and complete to the best of my ability, but obviously trust at your own risk. It is worth noting that there are 4857377 rows and 8 columns present in the Bitcoin Historical data.
+The primary dataset used in this analysis was released by [Quantum Analytics](https://www.quantumanalyticsco.org/). Ii could not upload it to github because of the size. It has 4857377 rows of data and has a size of almost 300 megabyte. You can also download this dataset [here](https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data). It is made up of CSV files for select bitcoin exchanges for the time period of Jan 2012 to December March 2021, with a minute to minute updates of OHLC (Open, High, Low, Close), Volume in BTC and indicated currency, and weighted bitcoin price. Timestamps are in Unix time. Timestamps without any trades or activity have their data fields filled with NaNs. If a timestamp is missing, or if there are jumps, this may be because the exchange (or its API) was down, the exchange (or its API) did not exist, or some other unforeseen technical error in data reporting or gathering. All effort has been made to deduplicate entries and verify the contents are correct and complete to the best of my ability, but obviously trust at your own risk. It is worth noting that there are 4857377 rows and 8 columns present in the Bitcoin Historical data.
 
-## Metadata
 The dataset contains 8 columns and they include:
 
 - **Timestamp:** This column represents the timestamp or time at which the data point was recorded. It is a reference to a specific moment in time, often in Unix timestamp format (measured in seconds since January 1, 1970).
@@ -82,10 +97,7 @@ The dataset contains 8 columns and they include:
 
 - **Weighted_Price:** The volume-weighted average price (VWAP) or the average price of the financial instrument during the specified time period, considering the trading volume. It provides a more comprehensive view of the average transaction price.
 
-## Tools
-- Python (Was used for Data Cleaning and Exploratory Data Analysis)
-  
-- Power BI (Was used to create reports and dashboard for this analysis)
+
 
 ## Data Cleaning and Exploratory Data Analysis using Python
 ### Import all the necessary libraries

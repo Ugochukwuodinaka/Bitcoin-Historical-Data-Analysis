@@ -89,9 +89,16 @@ The dataset contains 1 sheet/table and the columns includes:
 - **Weighted_Price:** The volume-weighted average price (VWAP) or the average price of the financial instrument during the specified time period, considering the trading volume. It provides a more comprehensive view of the average transaction price.
 
 ## Data Analysis and Visuals in Python:
-|  Trading Volume By Year  | Transactrion Value By Year  |  Weighted Price By Yyear       | Total Open, Low, High, Close Price Bby Year          |
-|--------------------------|-----------------------------|--------------------------------|-----------------------------------------------=------|
-|Trading Volume By Year.png|Transaction Value By Year.png|Weighted Price Over The Year.png|Total of Open Low High Close Price Over The Years.png |
+
+Trading Volume By Year             | Transactrion Value By Year        
+:---------------------------------:|:--------------------------------:|
+ ![](Trading_Volume_By_Year.png)   |![](Transaction_Value_By_Year.png)
+
+
+ Weighted Price By Year                     |Total Open, Low, High, Close Price By Year 
+:------------------------------------------:|:-------------------------------------:|
+ ![](Weighted_Price_Value_By_Year.png)      |![](Open_Low_High_Close_Prices_By_Year.png)  
+
 
 ## View Power BI Dashboard Report
 Here’s a link to a [Dashboard Report](https://app.powerbi.com/view?r=eyJrIjoiYTczNTZlNzgtYzJiYS00OWZlLThiNTEtNTMxMzk2ZGM5ZjNkIiwidCI6IjdlYzI5NjU5LTNjZjItNGYzZi1hYmIzLWE3MjJlZGY3ZmYyZCJ9)

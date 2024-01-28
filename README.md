@@ -51,21 +51,21 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 - Data Collection: Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
   
 - Data Preprocessing:
-    1. Removed data rows with null values or has "NaN" because we have 1243608 rows of data with only Timestamp colu,mn data and without the rest of the column data.
-    2. Created a datetime column from the Timestamp column and name it "Date"
-    3. Created a "Year" column from the "Date" column
-    4. Removed the "Timestamp" column
-    5. Re-arranged the columns     
+    1. Remove data rows with null values or has "NaN" because we have 1243608 rows of data with only Timestamp column data and without the rest of the column data.
+    2. Create a datetime column from the Timestamp column and name it "Date"
+    3. Create a "Year" column from the "Date" column
+    4. Remove the "Timestamp" column
+    5. Re-arrange the columns     
 
 - Exploratory Data Analysis (EDA): Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
   
 ### Statistical Analysis:
 
-- Calculated descriptive statistics, including mean, median, standard deviation, and correlation coefficients, to quantify Bitcoin's price movements and trading activity.
+- Calculate descriptive statistics, including mean, median, standard deviation, and correlation coefficients, to quantify Bitcoin's price movements and trading activity.
 
 ### Volatility Analysis:
 
-- Measured Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explored the implications of volatility on risk management and investment strategies.
+- Measure Bitcoin's volatility using standard deviation, historical volatility, or other volatility metrics. Explore the implications of volatility on risk management and investment strategies.
 
 ### Conclusion:
 
@@ -74,7 +74,7 @@ The data analysis project provides valuable insights into Bitcoin's historical p
 ## Dataset Overview
 The primary dataset used in this analysis was released by [Quantum Analytics](https://www.quantumanalyticsco.org/). Ii could not upload it to github because of the size. It has 4857377 rows of data and has a size of almost 300 megabyte. You can also download this dataset [here](https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data). It is made up of CSV files for select bitcoin exchanges for the time period of Jan 2012 to December March 2021, with a minute to minute updates of OHLC (Open, High, Low, Close), Volume in BTC and indicated currency, and weighted bitcoin price. Timestamps are in Unix time. Timestamps without any trades or activity have their data fields filled with NaNs. If a timestamp is missing, or if there are jumps, this may be because the exchange (or its API) was down, the exchange (or its API) did not exist, or some other unforeseen technical error in data reporting or gathering. All effort has been made to deduplicate entries and verify the contents are correct and complete to the best of my ability, but obviously trust at your own risk. It is worth noting that there are 4857377 rows and 8 columns present in the Bitcoin Historical data.
 
-The dataset contains 8 columns and they include:
+The dataset columns are include:
 
 - **Timestamp:** This column represents the timestamp or time at which the data point was recorded. It is a reference to a specific moment in time, often in Unix timestamp format (measured in seconds since January 1, 1970).
 

@@ -1,4 +1,5 @@
 # Bitcoin-Historical-Data (Jan, 2012 - March, 2021)
+![](bitcoin.jpg)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -9,10 +10,6 @@
 - [Multivariate Analysis](#multivariate-analysis)
 - [Observation and Summary](#observation-and-summary)
 - [View Dashboard Report](#view-power-bi-dashboard-report)
-
-## Project Screenshot From Power BI Dashboard
-![Bitcoin Historical Dashboard](https://github.com/Ugochukwuodinaka/Bitcoin-Historical-Data/assets/157266999/f6c8b9d9-2b0c-40ad-a6c0-fbec871d36a3)
-
 
 ## Project Overview
 **Introduction:**

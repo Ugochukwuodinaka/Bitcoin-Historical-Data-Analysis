@@ -97,7 +97,9 @@ Trading Volume By Year             | Transactrion Value By Year
 
  Weighted Price By Year                     |Total Open, Low, High, Close Price By Year 
 :------------------------------------------:|:-------------------------------------:|
- ![](Weighted_Price_Value_By_Year.png)      |![](Open_Low_High_Close_Prices_By_Year.png)  
+     ![](Weighted_Price_Value_By_Year.png)  |![](Open_Low_High_Close_Prices_By_Year.png)  
+
+ To view the complete Exploratory Data Analysis of this project python's Jupiter Notebook, please click [here](BITCOIN_HISTORICAL_DATA.ipynb)
 
  
 ## Data Analysis and Visuals in Power BI:

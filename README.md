@@ -16,7 +16,7 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 ### Problem Statement
 - What was the trading volume of Bitcoin between 2012 - 2021?
 - What was the transaction value within this period?
-- Whay was the average transaction value within this period?
+- What was the average transaction value within this period?
 - What was the total weighted price of Bitcoin within this period?
 - What was the minimum open price and maximum close price within this period?
 - Explain all these with charts showing their trends over the years.

@@ -39,9 +39,25 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 - Provide Data-Driven Insights: Extract additional insights from the analysis beyond the specified questions, uncovering any notable trends, anomalies, or correlations observed in the data that may inform decision-making or provide deeper understanding of Bitcoin market dynamics.
 
 ### Tools Used
-- Python (Was used for Data Cleaning, profilling and Exploratory Data Analysis)
+1. Python (Was used for Data Cleaning, profilling and Exploratory Data Analysis)
+   - The following Python Features were incorporated:
+      1. Jupiter Notebook
+      2. Numpy
+      3. pandas
+      4. Visualization
+          - Matplotlib
+          - Seaborn
+          - Plotly
+      5. Integration With Other tools
   
-- Power BI (Was used to create reports and dashboard for this analysis)
+3. Power BI (Was used to create reports and dashboard for this analysis)
+   - The following Power BI Features were incorporated:
+      1. Bookmarking
+      2. DAX
+      3. Quick Measures
+      4. Modelling
+      5. Filters
+      6. Tooltips
 
 ### Methodology (Python):
 

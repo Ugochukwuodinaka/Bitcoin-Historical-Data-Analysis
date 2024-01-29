@@ -5,7 +5,7 @@
 - [Project Overview](#project-overview)
 - [Tools Used](#tools-used)
 - [Dataset Overview](#dataset-overview)
-- [Data Analysis Chart Visuals in Python](#data-analysis-chart-visuals-in-python)
+- [Bitcoin Historical Data EDA In Python](#bitcoin-historical-data-eda-in-python)
 - [View Power BI Dashboard Report](#view-power-bi-dashboard-report)
 
 ## Project Overview
@@ -85,7 +85,7 @@ The dataset contains 1 sheet/table and the columns includes:
 
 - **Weighted_Price:** The volume-weighted average price (VWAP) or the average price of the financial instrument during the specified time period, considering the trading volume. It provides a more comprehensive view of the average transaction price.
 
-## Data Analysis Chart Visuals in Python:
+## Bitcoin Historical Data EDA In Python:
 
 Trading Volume By Year             | Transactrion Value By Year        
 :---------------------------------:|:--------------------------------:|
@@ -96,7 +96,7 @@ Trading Volume By Year             | Transactrion Value By Year
 :---------------------------------------------:|:----------------------------------------:|
 ![](Weighted_Price_Value_By_Year.png)          |![](Open_Low_High_Close_Prices_By_Year.png)  
 
- To view the complete Exploratory Data Analysis of this project python's Jupiter Notebook, please click [here](BITCOIN_HISTORICAL_DATA.ipynb)
+ To view the complete Exploratory Data Analysis (EDA) of this project in python Jupiter Notebook, please click [here](BITCOIN_HISTORICAL_DATA.ipynb)
 
  
 ## Data Analysis and Visuals in Power BI:

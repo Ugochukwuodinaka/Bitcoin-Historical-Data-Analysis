@@ -3,13 +3,10 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Methodology (Python)](#methodology-python)
-- [KPIs](#key-performance-indicators)
-- [Univariate Analysis](#univariate-analysis)
-- [Bivariate Amalysis](#bivariate-analysis)
-- [Multivariate Analysis](#multivariate-analysis)
-- [Observation and Summary](#observation-and-summary)
-- [View Dashboard Report](#view-power-bi-dashboard-report)
+- [Tools Used](#tools-used)
+- [Dataset Overview](#dataset-overview)
+- [Data Analysis Chart Visuals in Python](#data-analysis-chart-visuals-in-python)
+- [View Power BI Dashboard Report](#view-power-bi-dashboard-report)
 
 ## Project Overview
 ### Introduction:

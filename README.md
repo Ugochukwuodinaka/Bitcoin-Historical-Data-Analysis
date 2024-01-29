@@ -109,7 +109,7 @@ Trading Volume By Year             | Transactrion Value By Year
 4. The Trading Volume by Year experienced its peak period in 2015 capping at 5.53M BTC, while the year with the least volume traded was 567,948 BTC.
 5. 2012 was the year with the least transaction value with a value of 5.8M suggesting the nascent stage for Bitcoin as a financial asset whi it peaked in 2021 at 35.12bn reinforcing the ongoing prominence of Bitcoin in the financial market.
 6. The year 2011 was not fully included in this analysis because the traded period was just for 3 months and wasn't well structured at that time.
-7. A complete document in pdf containing the observations and summary from this analysis can be viewed and downloaded here
+7. A complete document in pdf containing the observations and summary from this analysis can be viewed and downloaded [here](A_Complete_Observation_and_Summary_Analysis_of_Bitcoin_Historical_Data.pdf)
 
 ## View Power BI Dashboard Report
 Here’s a link to a [Dashboard Report](https://app.powerbi.com/view?r=eyJrIjoiYTczNTZlNzgtYzJiYS00OWZlLThiNTEtNTMxMzk2ZGM5ZjNkIiwidCI6IjdlYzI5NjU5LTNjZjItNGYzZi1hYmIzLWE3MjJlZGY3ZmYyZCJ9)

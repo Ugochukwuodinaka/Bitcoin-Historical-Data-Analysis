@@ -1,5 +1,5 @@
 # Bitcoin-Historical-Data (Jan, 2012 - March, 2021)
-![](bitcoin1.jpg)
+![](images/bitcoin1.jpg)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -103,20 +103,20 @@ The dataset contains 1 sheet/table and the columns includes:
 
 ## Bitcoin Historical Data EDA In Python:
 
-Trading Volume By Year             | Transactrion Value By Year        
-:---------------------------------:|:--------------------------------:|
- ![](Trading_Volume_By_Year.png)   |![](Transaction_Value_By_Year.png)
+Trading Volume By Year                    | Transactrion Value By Year        
+:----------------------------------------:|:--------------------------------:|
+ ![](images/Trading_Volume_By_Year.png)   |![](images/Transaction_Value_By_Year.png)
 
 
- Weighted Price By Year                        |Total Open, Low, High, Close Price By Year 
-:---------------------------------------------:|:----------------------------------------:|
-![](Weighted_Price_Value_By_Year.png)          |![](Open_Low_High_Close_Prices_By_Year.png)  
+ Weighted Price By Year                               |Total Open, Low, High, Close Price By Year 
+:----------------------------------------------------:|:----------------------------------------:|
+![](images/Weighted_Price_Value_By_Year.png)          |![](images/Open_Low_High_Close_Prices_By_Year.png)  
 
  To view the complete Exploratory Data Analysis (EDA) of this project in python Jupiter Notebook, please click [here](BITCOIN_HISTORICAL_DATA.ipynb)
 
  
 ## Data Analysis and Visuals in Power BI:
-![](Bitcoin_Historical_Dashboard.png)
+![](images/Bitcoin_Historical_Dashboard.png)
 
 1. From the dashboard, it is observed that the total Trading Volume between 2012 and 2021 is 34M BTC
 2. The Total Transaction Value within this period is 151bn, the Average Transaction Vvalue is 644.5

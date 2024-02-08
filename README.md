@@ -24,19 +24,19 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 
 ### Objectives:
 
-- Analyze Bitcoin Trading Volume: Investigate the trading volume of Bitcoin from 2012 to 2021 to understand the level of market activity and liquidity over time.
+- __Analyze Bitcoin Trading Volume:__ Investigate the trading volume of Bitcoin from 2012 to 2021 to understand the level of market activity and liquidity over time.
 
-- Evaluate Transaction Value: Determine the total transaction value of Bitcoin within the specified period to assess the monetary value of transactions conducted on the Bitcoin network.
+- __Evaluate Transaction Value:__ Determine the total transaction value of Bitcoin within the specified period to assess the monetary value of transactions conducted on the Bitcoin network.
 
-- Calculate Average Transaction Value: Calculate the average transaction value of Bitcoin transactions over the period under consideration, providing insights into the typical size of transactions.
+- __Calculate Average Transaction Value:__ Calculate the average transaction value of Bitcoin transactions over the period under consideration, providing insights into the typical size of transactions.
 
-- Assess Total Weighted Price: Determine the total weighted price of Bitcoin within the period to understand the overall price trend and market valuation of Bitcoin.
+- __Assess Total Weighted Price:__ Determine the total weighted price of Bitcoin within the period to understand the overall price trend and market valuation of Bitcoin.
 
-- Identify Price Extremes: Identify the minimum open price and maximum close price of Bitcoin within the period to highlight the range of price fluctuations and extremes observed in the market.
+- __Identify Price Extremes:__ Identify the minimum open price and maximum close price of Bitcoin within the period to highlight the range of price fluctuations and extremes observed in the market.
 
-- Visualize Trends with Charts: Present trends and patterns in Bitcoin trading volume, transaction value, average transaction value, weighted price, minimum open price, and maximum close price, open, low, high and close price over the years, using visualizations such as line charts.
+- __Visualize Trends with Charts:__ Present trends and patterns in Bitcoin trading volume, transaction value, average transaction value, weighted price, minimum open price, and maximum close price, open, low, high and close price over the years, using visualizations such as line charts.
 
-- Provide Data-Driven Insights: Extract additional insights from the analysis beyond the specified questions, uncovering any notable trends, anomalies, or correlations observed in the data that may inform decision-making or provide deeper understanding of Bitcoin market dynamics.
+- __Provide Data-Driven Insights:__ Extract additional insights from the analysis beyond the specified questions, uncovering any notable trends, anomalies, or correlations observed in the data that may inform decision-making or provide deeper understanding of Bitcoin market dynamics.
 
 ### Tools Used
 1. Python (Was used for Data Cleaning, profilling and Exploratory Data Analysis)
@@ -61,16 +61,16 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 
 ### Methodology (Python):
 
-- Data Collection: Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
+- __Data Collection:__ Gather Bitcoin historical data covering the period from 2012 to 2021, ensuring data integrity and accuracy.
   
-- Data Preprocessing:
+- __Data Preprocessing:__
     1. Remove data rows with null values or has "NaN" because we have 1243608 rows of data with only Timestamp column data and without the rest of the column data.
     2. Create a datetime column from the Timestamp column and name it "Date"
     3. Create a "Year" column from the "Date" column
     4. Remove the "Timestamp" column
     5. Re-arrange the columns     
 
-- Exploratory Data Analysis (EDA): Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
+- __Exploratory Data Analysis (EDA):__ Conduct EDA to gain insights into Bitcoin price dynamics, trading volume patterns, and overall market behavior. Visualize trends using line charts, and other charts.
   
 ### Statistical Analysis:
 
@@ -85,30 +85,30 @@ The primary dataset used in this analysis was released by [Quantum Analytics](ht
 
 The dataset contains 1 sheet/table and the columns includes:
 
-- **Timestamp:** This column represents the timestamp or time at which the data point was recorded. It is a reference to a specific moment in time, often in Unix timestamp format (measured in seconds since January 1, 1970).
+- __Timestamp:__ This column represents the timestamp or time at which the data point was recorded. It is a reference to a specific moment in time, often in Unix timestamp format (measured in seconds since January 1, 1970).
 
-- **Open:** The opening price of the financial instrument (e.g., a cryptocurrency) during the specified time period. It is the price at which the first trade occurred.
+- __Open:__ The opening price of the financial instrument (e.g., a cryptocurrency) during the specified time period. It is the price at which the first trade occurred.
 
-- **High:** The highest price reached during the specified time period.
+- __High:__ The highest price reached during the specified time period.
 
-- **Low:** The lowest price reached during the specified time period.
+- __Low:__ The lowest price reached during the specified time period.
 
-- **Close:** The closing price of the financial instrument at the end of the specified time period. It is the price at which the last trade occurred.
+- __Close:__ The closing price of the financial instrument at the end of the specified time period. It is the price at which the last trade occurred.
 
-- **Volume_(BTC):** The total trading volume of the financial instrument in terms of the base currency (e.g., Bitcoin) during the specified time period. It represents the total quantity of the financial instrument traded.
+- __Volume (BTC):__ The total trading volume of the financial instrument in terms of the base currency (e.g., Bitcoin) during the specified time period. It represents the total quantity of the financial instrument traded.
 
-- **Volume_(Currency):** The total trading volume of the financial instrument in terms of the quote currency (e.g., US dollars) during the specified time period. It represents the total value of the trades.
+- __Volume (Currency):__ The total trading volume of the financial instrument in terms of the quote currency (e.g., US dollars) during the specified time period. It represents the total value of the trades.
 
-- **Weighted_Price:** The volume-weighted average price (VWAP) or the average price of the financial instrument during the specified time period, considering the trading volume. It provides a more comprehensive view of the average transaction price.
+- __Weighted Price:__ The volume-weighted average price (VWAP) or the average price of the financial instrument during the specified time period, considering the trading volume. It provides a more comprehensive view of the average transaction price.
 
 ## Bitcoin Historical Data EDA In Python:
 
-Trading Volume By Year                    | Transactrion Value By Year        
+__Trading Volume By Year__                | __Transactrion Value By Year__        
 :----------------------------------------:|:--------------------------------:|
  ![](images/Trading_Volume_By_Year.png)   |![](images/Transaction_Value_By_Year.png)
 
 
- Weighted Price By Year                               |Total Open, Low, High, Close Price By Year 
+ __Weighted Price By Year__                           |__Total Open, Low, High, Close Price By Year__ 
 :----------------------------------------------------:|:----------------------------------------:|
 ![](images/Weighted_Price_Value_By_Year.png)          |![](images/Open_Low_High_Close_Prices_By_Year.png)  
 
@@ -118,8 +118,8 @@ Trading Volume By Year                    | Transactrion Value By Year
 ## Data Analysis and Visuals in Power BI:
 ![](images/Bitcoin_Historical_Dashboard.png)
 
-1. From the dashboard, it is observed that the total Trading Volume between 2012 and 2021 is 34M BTC
-2. The Total Transaction Value within this period is 151bn, the Average Transaction Vvalue is 644.5
+1. From the dashboard, it was observed that the total Trading Volume between 2012 and 2021 is 34M BTC
+2. The Total Transaction Value within this period is 151bn, the Average Transaction Value is 644.5
 3. Total Weighted Price within this period is 22bn, the Minimum Open Price is 3.80, while the maximum is 61.78k
 4. The Trading Volume by Year experienced its peak period in 2015 capping at 5.53M BTC, while the year with the least volume traded was 567,948 BTC.
 5. 2012 was the year with the least transaction value with a value of 5.8M suggesting the nascent stage for Bitcoin as a financial asset whi it peaked in 2021 at 35.12bn reinforcing the ongoing prominence of Bitcoin in the financial market.

@@ -1,4 +1,4 @@
-# Bitcoin-Historical-Data (Jan, 2012 - March, 2021)
+# Bitcoin Historical Data (Jan, 2012 - March, 2021) Analysis
 ![](images/bitcoin1.jpg)
 
 ## Table of Contents

@@ -38,6 +38,14 @@ Bitcoin, the pioneering cryptocurrency, has garnered significant attention and i
 
 - __Provide Data-Driven Insights:__ Extract additional insights from the analysis beyond the specified questions, uncovering any notable trends, anomalies, or correlations observed in the data that may inform decision-making or provide deeper understanding of Bitcoin market dynamics.
 
+### Skills Utilized
+1. Data Cleaning
+2. Data Visualiziation
+3. Descriptive Analytics
+4. Critical Thinking and Problem Solving
+5. Communication and Reporting
+
+
 ### Tools Used
 1. Python (Was used for Data Cleaning, profilling and Exploratory Data Analysis)
    - The following Python Features were incorporated:
@@ -129,3 +137,5 @@ __Trading Volume By Year__                | __Transactrion Value By Year__
 ## View Power BI Dashboard Report
 Here’s a link to a [Dashboard Report](https://app.powerbi.com/view?r=eyJrIjoiYTczNTZlNzgtYzJiYS00OWZlLThiNTEtNTMxMzk2ZGM5ZjNkIiwidCI6IjdlYzI5NjU5LTNjZjItNGYzZi1hYmIzLWE3MjJlZGY3ZmYyZCJ9)
  I created in the second phase of this project . This dashboard report displays a vivid visual of this analysis on Historical Bitcoin trading trend between Jan, 2012 - Mmarch, 2021.
+
+## Thank You For Following Through!

@@ -139,18 +139,18 @@ __Trading Volume By Year__                | __Transactrion Value By Year__
 ![](images/Bitcoin_Historical_Dashboard.png)
 
 1. From the dashboard, it was observed that the total Trading Volume between 2012 and 2021 is __34M BTC__.
-2. The Total Transaction Value within this period is 151bn, the Average Transaction Value is __644.5__.
-3. Total Weighted Price within this period is 22bn, the Minimum Open Price is 3.80, while the maximum is __61.78k__.
-4. The Trading Volume by Year experienced its peak period in 2015 capping at 5.53M BTC, while the year with the least volume traded was __567,948 BTC__.
+2. The Total Transaction Value within this period is __151bn__, the Average Transaction Value is __644.5__.
+3. Total Weighted Price within this period is 22bn, the Minimum Open Price is __3.80__, while the maximum is __61.78k__.
+4. The Trading Volume by Year experienced its peak period in 2015 capping at __5.53M BTC__, while the year with the least volume traded was __567,948 BTC__.
 5. 2012 was the year with the least transaction value with a value of __5.8M__ suggesting the nascent stage for Bitcoin as a financial asset whi it peaked in 2021 at __35.12bn__ reinforcing the ongoing prominence of Bitcoin in the financial market.
-6. The year __2011__ was not fully included in this analysis because the traded period was just for __3__ months and wasn't well structured at that time.
-7. A complete document in pdf containing the observations and summary from this analysis can be viewed [here](A_Complete_Observation_and_Summary_Analysis_of_Bitcoin_Historical_Data.pdf)
+6. The year 2011 was not fully included in this analysis because the traded period was just for __3 months__ and wasn't well structured at that time.
+7. A complete document in __PDF__ containing the observations and summary from this analysis can be viewed [here](A_Complete_Observation_and_Summary_Analysis_of_Bitcoin_Historical_Data.pdf)
 <br />
 <br />
 
 ## View Power BI Dashboard Report
 Here’s a link to a [Dashboard Report](https://app.powerbi.com/view?r=eyJrIjoiYTczNTZlNzgtYzJiYS00OWZlLThiNTEtNTMxMzk2ZGM5ZjNkIiwidCI6IjdlYzI5NjU5LTNjZjItNGYzZi1hYmIzLWE3MjJlZGY3ZmYyZCJ9)
- I created in the second phase of this project . This dashboard report displays a vivid visual of this analysis on Historical Bitcoin trading trend between Jan, 2012 - Mmarch, 2021.
+ I created in the second phase of this project . This dashboard report displays a vivid visual of this analysis on Historical Bitcoin trading trend between Jan, 2012 - March, 2021.
 <br />
 <br />
 

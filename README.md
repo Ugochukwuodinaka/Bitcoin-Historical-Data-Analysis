@@ -155,3 +155,4 @@ Here’s a link to a [Dashboard Report](https://app.powerbi.com/view?r=eyJrIjoiY
 <br />
 
 ## Thank You For Following Through!
+![](images/Thank_You.jpg)
